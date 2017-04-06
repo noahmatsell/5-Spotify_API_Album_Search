@@ -45,7 +45,7 @@ $(document).on("click", '.album-button',function(e){
     var year = data.release_date;
     year = year.substring(0, 4);
     lightboxHTML += '<header><a href="#" class="back-button"> <- Back to search </a><img src="'+data.images[1].url+'">';
-    lightboxHTML += '<div class="album-info"><h1>'+data.name+' ('+year+')</h1>';
+    lightboxHTML += '<div class="album-info"><a href="'+data.external_urls.spotify+'"><h1>'+data.name+' ('+year+')</h1></a>';
     lightboxHTML += '<p>'+data.artists[0].name+'</p></div></header>';
     var tracks = data.tracks.items;
     lightboxHTML += '<div class="tracks"><p>Track list:</p><ol>';
